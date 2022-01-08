@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Navigator</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">导航</string>
+    <string name="second_fragment_label">工具</string>
+
+    <string name="first_tab_name">导航</string>
+    <string name="second_tab_name">工具</string>
+
+</resources>
