@@ -44,3 +44,8 @@
 -keep interface com.google.android.support.v4.app.** { *; }
 -keep public class * extends com.google.android.support.v4.**
 -keep public class * extends com.google.android.support.v4.app.Fragment
+
+-keep class com.baidu.** {*;}
+-keep class vi.com.** {*;}
+-keep class com.baidu.vi.** {*;}
+-dontwarn com.baidu.**
