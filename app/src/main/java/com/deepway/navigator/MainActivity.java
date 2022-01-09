@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        fragmentList.add(new NavigationFragment());
-        fragmentList.add(new ServiceFragment());
+        fragmentList.add(NavigationFragment.newInstance("", ""));
+        fragmentList.add(ServiceFragment.newInstance("", ""));
         setFragmentPosition(0);
     }
 

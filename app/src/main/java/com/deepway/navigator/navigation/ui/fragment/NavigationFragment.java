@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.deepway.navigator.R;
+import com.deepway.navigator.databinding.FragmentNavigationBinding;
 
 
 public class NavigationFragment extends Fragment {
@@ -18,6 +18,8 @@ public class NavigationFragment extends Fragment {
 
     private String mParam1;
     private String mParam2;
+
+    private FragmentNavigationBinding binding;
 
 
     public static NavigationFragment newInstance(String param1, String param2) {
@@ -39,8 +41,16 @@ public class NavigationFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_navigation, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        binding = FragmentNavigationBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+        getLifecycle().addObserver(binding.mapContainer);
+        return view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 }
