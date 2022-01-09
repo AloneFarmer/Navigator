@@ -32,7 +32,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Navigator">
 
-        <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="oeqmGrDfPhD6n1hV59OVV7FcOcfxdf0y" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="gT2XSUgoMFysCzwLCUtrIItTUdclThsf" />
 
         <activity
             android:name=".MainActivity"
