@@ -2,27 +2,13 @@ package com.deepway.navigator;
 
 import android.os.Bundle;
 
-import com.deepway.navigator.navigation.ui.fragment.NavigationFragment;
-import com.deepway.navigator.service.ui.fragment.ServiceFragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.snackbar.Snackbar;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.View;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import com.deepway.navigator.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
+import com.deepway.navigator.navigation.ui.fragment.NavigationFragment;
+import com.deepway.navigator.service.ui.fragment.ServiceFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         fragmentList.add(new NavigationFragment());
         fragmentList.add(new ServiceFragment());
-        // 初始化展示MessageFragment
         setFragmentPosition(0);
     }
 
